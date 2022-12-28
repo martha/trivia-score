@@ -39,15 +39,7 @@ def normalize(score, answer_dict):
   return round(normalized * 30)
 
 if __name__ == "__main__":
-  fake_data = {
-    "A": -500,
-    "B": 500,
-    "C": 1850,
-    "D": 1900,
-    "E": 2020
-  }
-
-  correct_list = ["A", "B", "C", "D", "E"]
+  correct_list = list(answers.keys())
 
   list_by_score = {}
   for l in list(itertools.permutations(correct_list)):
