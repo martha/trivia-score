@@ -2,7 +2,7 @@ import random
 import itertools
 import pprint
 
-from answers import answers
+from answers import answers, olivia_guess
 
 # TODO - we have to convert from the list of hist events to numbers
 # TODO - double points for exact correct list?
@@ -34,9 +34,10 @@ def normalize(score, answer_dict):
   l = list(answer_dict.keys())
   l.reverse()
   max_score = weighted_pairwise_score(l, answer_dict)
+  print(max_score)
 
   normalized = (max_score - score) / max_score
-  return round(normalized * 30)
+  return round(normalized * 50)
 
 
 def swap_position(l, i, j):
@@ -45,17 +46,29 @@ def swap_position(l, i, j):
   l[j] = tmp
 
 
-
+def score(guess_list, answer_dict):
+  print(guess_list)
+  raw_score = weighted_pairwise_score(guess_list, answer_dict)
+  normalized_score = normalize(raw_score, answer_dict)
+  print(f"Raw score: {raw_score}")
+  print(f"Nor score: {normalized_score}")
+  return normalized_score
 
 
 if __name__ == "__main__":
-  correct_list = list(answers.keys())
+  score(olivia_guess, answers)
 
-  raw = weighted_pairwise_score(correct_list, answers)
-  normalized = normalize(raw, answers)
-  print(corr)
 
-  swap_position(l, 4, 5)
-  score(l)
-  swap_position(l, 25, 26)
-  score(l)
+  # l = list(answers.keys())
+  # print(l)
+  # score(l, answers)
+
+  # # l.reverse()
+  # # score(l, answers)
+
+  # # l.reverse()  # reverse it back
+
+  # for i in range(30):
+  #   r = random.randint(0, 28)
+  #   swap_position(l, r, r+1)
+  #   score(l, answers)
