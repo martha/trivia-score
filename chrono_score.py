@@ -38,15 +38,24 @@ def normalize(score, answer_dict):
   normalized = (max_score - score) / max_score
   return round(normalized * 30)
 
+
+def swap_position(l, i, j):
+  tmp = l[i]
+  l[i] = l[j]
+  l[j] = tmp
+
+
+
+
+
 if __name__ == "__main__":
   correct_list = list(answers.keys())
 
-  list_by_score = {}
-  for l in list(itertools.permutations(correct_list)):
-    unweighted_score = weighted_pairwise_score(l, fake_data)
-    s = normalize(unweighted_score, fake_data)
-    if not list_by_score.get(s):
-      list_by_score[s] = []
-    list_by_score[s].append(l)
-  pp = pprint.PrettyPrinter(width=41, compact=True)
-  pp.pprint(list_by_score)
+  raw = weighted_pairwise_score(correct_list, answers)
+  normalized = normalize(raw, answers)
+  print(corr)
+
+  swap_position(l, 4, 5)
+  score(l)
+  swap_position(l, 25, 26)
+  score(l)
