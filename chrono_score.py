@@ -22,6 +22,7 @@ def weighted_pairwise_score(guess_list, answer_dict):
       # then they are in the correct order and we don't give points. But if
       # the diff is pos, then they are in the wrong order, and we give points
       # according to how far apart they are.
+      # weighted_score += max(0, answer_dict[g1] - answer_dict[g2])
       weighted_score += max(0, answer_dict[g1] - answer_dict[g2])
   return weighted_score
 
