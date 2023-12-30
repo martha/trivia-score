@@ -1,0 +1,3 @@
+def score(group_lists):
+	for i in group_lists:
+		...
