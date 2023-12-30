@@ -24,6 +24,7 @@ martha_lael_mountains = [
   "Everest",
 ]
 
+
 correct_mountains = [
   "Jerimoth Hill",
   "Mount Washington",
@@ -36,6 +37,35 @@ correct_mountains = [
   "K2",
   "Everest",
 ]
+
+
+
+test_mountains = [
+  "Jerimoth Hill",
+  "Mount Mitchell",
+  "Mount Washington",
+  "Mount St Helens",
+  "Mount Fuji",
+  "Matterhorn",
+  "Kilimanjaro",
+  "Denali",
+  "K2",
+  "Everest",
+]
+
+kronenberg_mountains = [
+  "Everest",
+  "K2",
+  "Denali",
+  "Mount St Helens",
+  "Kilimanjaro",
+  "Matterhorn",
+  "Mount Fuji",
+  "Mount Mitchell",
+  "Mount Washington",
+  "Jerimoth Hill",
+]
+kronenberg_mountains.reverse()
 
 
 # 10mg of adrenochrome
