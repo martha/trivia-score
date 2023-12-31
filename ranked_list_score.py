@@ -121,5 +121,7 @@ if __name__ == "__main__":
   # score(edwards_battles, battles, p = p)
   # score(kronenberg_battles, battles, p = p)
 
+  # finish testing with the final group
+
 
 
