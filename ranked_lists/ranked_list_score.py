@@ -3,10 +3,7 @@ import itertools
 import pprint
 import math
 
-from ranked_lists_2023 import mountains, \
-  martha_lael_mountains, correct_mountains, test_mountains, kronenberg_mountains, \
-  costs, kronenberg_costs, edwards_costs, test_costs, \
-  battles, edwards_battles, kronenberg_battles, test_battles \
+from vitamin_c_example import vitamin_c_mg_per_100g, example_guess
 
 """
 Given a "guess list", or a list of items, and an answer dictionary mapping
@@ -103,25 +100,6 @@ def swap_position(l, i, j):
 # TODO - need to make and document parameters p and q
 
 if __name__ == "__main__":
-  # MOUNTAINS: we liked square root (power of 1/2) which is the default param
-  score(test_mountains, mountains)
-  score(kronenberg_mountains, mountains)
-  score(martha_lael_mountains, mountains)
-
-  # COSTS: we like p = 2/3
-  # p = 0.3
-  # score(test_costs, costs, p)
-  # score(kronenberg_costs, costs, p)
-  # score(edwards_costs, costs, p)
-
-
-  # BATTLES
-  # p = 1/2
-  # score(test_battles, battles, p = p)
-  # score(edwards_battles, battles, p = p)
-  # score(kronenberg_battles, battles, p = p)
-
-  # finish testing with the final group
-
+  score(example_guess, vitamin_c_mg_per_100g)
 
 
