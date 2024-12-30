@@ -1,3 +1,4 @@
+# Answers hash mapping keys to their values
 vitamin_c_mg_per_100g = {
   "Kakadu plum": 5300,
   "Rose hip": 426,
@@ -11,6 +12,7 @@ vitamin_c_mg_per_100g = {
   "Cantaloupe": 40,
 }
 
+# Participant guess to rank the items in order
 example_guess = [
   "Rose hip",
   "Broccoli",

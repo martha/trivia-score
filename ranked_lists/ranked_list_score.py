@@ -64,13 +64,13 @@ def normalize(score, answer_dict, p = 1/2, q = 1/2, normalized_max_score = 20):
 
   # Finally, return the score normalized against the desired max score for this round.
   normalized = normalized_max_score * (1 - sqrt_zo)
-  return normalized
+  return round(normalized)
 
 
 """
 Given a "guess list", or an ordered list of items, an answer dictionary mapping
-the items to their ranks, a max score for the round (used for normalizing),
-and an optional bonus quantity for a perfect list,
+the items to their ranks, p and q which are params you can fiddle with for
+score normalization, and an optional bonus quantity for a perfect list,
 return the normalized score plus bonus if applicable.
 """
 def score(guess_list, answer_dict, p = 1/2, q = 1/2, max_score = 20, bonus = 0):
@@ -101,6 +101,9 @@ def swap_position(l, i, j):
 
 
 if __name__ == "__main__":
-  score(example_guess, vitamin_c_mg_per_100g, p=1/2, q=1/2)
+  p = 1/2
+  q = 1/2
+  print("Example team")
+  score(example_guess, vitamin_c_mg_per_100g, p, q)
 
 
